@@ -8,7 +8,7 @@ import re
 # Récupération dynamique des features
 def get_feature_order():
     try:
-        health_url = "http://127.0.0.1:8000/health"
+        health_url = st.secrets["API_URL"].replace("/predict", "/health")
         j = requests.get(health_url, timeout=5).json()
         feats = j.get("features") or []
         if feats:
@@ -34,7 +34,7 @@ st.set_page_config(
 )
 
 APP_DIR = Path(__file__).resolve().parent
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = st.secrets["API_URL"]
 
 # SECTION - Styles (CSS)
 
