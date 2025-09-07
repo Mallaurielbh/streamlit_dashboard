@@ -1,20 +1,9 @@
-import unicodedata
 from pathlib import Path
 import requests
 import streamlit as st
 import numpy as np
 import pandas as pd
 import re
-
-import streamlit as st
-import streamlit_authenticator as stauth
-
-import streamlit as st
-import streamlit_authenticator as stauth
-
-import streamlit as st
-import streamlit_authenticator as stauth
-
 
 # Récupération dynamique des features
 def get_feature_order():
